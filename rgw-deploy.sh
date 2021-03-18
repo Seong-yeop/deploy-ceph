@@ -1,8 +1,8 @@
 #!/bin/env bash
 
-rgw_hostname=`hostname`
+rgw_hostname=`hostname -s`
 
-rm /var/lib/ceph/radosgw/*
+rm -rf /var/lib/ceph/radosgw/*
 mkdir -p /var/lib/ceph/radosgw/ceph-rgw.$rgw_hostname
 ceph auth get-or-create client.rgw.$rgw_hostname osd 'allow rwx' mon 'allow rw' -o /var/lib/ceph/radosgw/ceph-rgw.$rgw_hostname/keyring
 touch /var/lib/ceph/radosgw/ceph-rgw.$rgw_hostname/done
