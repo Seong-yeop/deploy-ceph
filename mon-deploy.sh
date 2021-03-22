@@ -37,9 +37,6 @@ sudo chown -R ceph:ceph /tmp/monmap
 sudo ceph-mon --mkfs -i $MONHOSTNAME --monmap /tmp/monmap --keyring /tmp/ceph.mon.keyring
 sudo chown -R ceph:ceph /var/lib/ceph
 
-echo "sleep 3"
-sleep 3
-
 systemctl start ceph-mon@$MONHOSTNAME 
 echo "mon start"
 
