@@ -2,6 +2,8 @@
 
 rgw_hostname=`hostname -s`
 
+systemctl stop ceph.target
+
 rm -rf /var/lib/ceph/radosgw/*
 mkdir -p /var/lib/ceph/radosgw/ceph-rgw.$rgw_hostname
 ceph auth get-or-create client.rgw.$rgw_hostname osd 'allow rwx' mon 'allow rw' -o /var/lib/ceph/radosgw/ceph-rgw.$rgw_hostname/keyring

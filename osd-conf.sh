@@ -10,4 +10,12 @@ for i in "${osd_ip[@]}"; do
   echo $i osd done
 done
 
+for i in "${osd_ip[@]}"; do
+  ssh -i /home/ubuntu/.ssh/csl.pem root@$i bash /home/ubuntu/osd-deploy.sh &
+done
+wait
+
+echo "all finised"
+
+
 
