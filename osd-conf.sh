@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-osd_ip=("172.31.12.188" "172.31.10.228" "172.31.5.190" "172.31.3.16")
+osd_ip=("172.31.12.188" "172.31.10.228" "172.31.5.190" "172.31.3.16") 
 
 for i in "${osd_ip[@]}"; do
   echo $i osd ceph.conf ceph.keyring copy start
