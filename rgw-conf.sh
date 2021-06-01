@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-rgw_ip=("172.31.4.82" "172.31.12.166")
+rgw_ip=("172.31.12.166")
 
 for i in "${rgw_ip[@]}"; do
   scp -i /home/ubuntu/.ssh/csl.pem /etc/ceph/ceph.conf root@$i:/etc/ceph/
