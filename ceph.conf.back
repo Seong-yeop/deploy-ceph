@@ -1,0 +1,69 @@
+# minimal ceph.conf for 1e174f1e-8559-11eb-8520-d15a5aa7f296
+[global]
+	fsid = 1e174f1e-8559-11eb-8520-d15a5aa7f296
+	mon_host = 172.31.4.82
+
+[client.rgw.ip-172-31-12-166-1]
+  host = ip-172-31-12-166
+  rgw frontends = "beast port=7480"
+  #rgw frontends = "civetweb port=80"
+  #rgw dns name = ip-172-31-12-166.example.com
+  #rgw_thread_pool_size = 1024
+
+
+[client.rgw.ip-172-31-12-166-2]
+  host = ip-172-31-12-166
+  rgw frontends = "beast port=7481"
+
+[client.rgw.ip-172-31-12-166-3]
+  host = ip-172-31-12-166
+  rgw frontends = "beast port=7482"
+
+[client.rgw.ip-172-31-12-166-4]
+  host = ip-172-31-12-166
+  rgw frontends = "beast port=7483"
+
+[client.rgw.ip-172-31-12-166-5]
+  host = ip-172-31-12-166
+  rgw frontends = "beast port=7484"
+
+[client.rgw.ip-172-31-12-166-6]
+  host = ip-172-31-12-166
+  rgw frontends = "beast port=7485"
+
+[client.rgw.ip-172-31-12-166-7]
+  host = ip-172-31-12-166
+  rgw frontends = "beast port=7486"
+
+[client.rgw.ip-172-31-12-166-8]
+  host = ip-172-31-12-166
+  rgw frontends = "beast port=7487"
+
+
+[client.rgw.ip-172-31-0-152]
+  host = ip-172-31-0-152
+
+[client.rgw.ip-172-31-15-150]
+  host = ip-172-31-15-150
+
+[client.rgw.ip-172-31-0-11]
+  host = ip-172-31-0-11
+
+[client.rgw.ip-172-31-3-186]
+  host = ip-172-31-3-186
+
+[client.rgw.ip-172-31-12-74]
+  host = ip-172-31-12-74
+
+[client.rgw.ip-172-31-4-25]
+  host = ip-172-31-4-25
+
+[client.rgw.ip-172-31-6-126]
+  host = ip-172-31-6-126
+
+[client.rgw.ip-172-31-7-92]
+  host = ip-172-31-7-92
+
+[osd]
+ bluestore_block_size = 6597071955406
+ osd_pool_default_pg_num = 250
